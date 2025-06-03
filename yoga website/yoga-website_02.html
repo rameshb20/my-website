@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prāṇotthāna - Yoga & Wellness</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <!-- Consider adding a favicon link here -->
+    <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Adjust if header height changes */
+        }
+
+        body {
+            font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Body font from theme */
+            line-height: 1.7; /* Slightly increased line-height */
+            color: #333333; /* Dark grey text from theme */
+            background-color: #F7F3EE; /* Light beige background from theme */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Georgia', serif; /* Heading font from theme */
+            font-weight: 500; /* Slightly less bold */
+            color: #8A5A44; /* Terracotta brown heading color from theme */
+            line-height: 1.3; /* Adjust heading line height */
+        }
+
+        h1 {
+            font-size: 3.5rem; /* Adjusted size */
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.8rem; /* Adjusted size */
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        /* Remove underline from theme */
+        /* h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #6B7A64; /* Updated Accent green underline */
+        /* } */
+
+        h3 {
+            font-size: 1.8rem; /* Consistent */
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem; /* Consistent */
+            color: #555; /* Slightly lighter grey for paragraphs */
+        }
+
+        a {
+            color: #6B7A64; /* Accent color for links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #8A5A44; /* Heading color on hover */
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1100px; /* Slightly narrower */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+         /* Center section content by default, override if needed */
+        section > .container {
+           text-align: center;
+        }
+
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(247, 243, 238, 0.9); /* Slightly transparent beige */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            z-index: 1000;
+            transition: padding 0.3s ease, background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(247, 243, 238, 0.98); /* Less transparent when scrolled */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07); /* Slightly stronger shadow */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            transition: padding 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #8A5A44; /* Heading color for logo */
+            font-size: 1.8rem;
+            font-weight: bold; /* Keep logo bold */
+            font-family:"Nunito Sans", sans-serif; /* Logo font */
+        }
+
+        .logo span {
+            color: #6B7A64; /* Accent color */
+        }
+
+        .logo-icon {
+            height: 35px; /* Slightly smaller */
+            margin-right: 10px;
+            color: #8A5A44; /* Match logo text */
+            stroke-width: 4; /* Thinner stroke */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 35px; /* More spacing */
+        }
+
+        .nav-links a {
+    text-decoration: none;
+    color: #8A5A44; /* Heading color */
+    font-size: 1rem; /* Slightly smaller */
+    font-weight: 400; /* Regular weight */
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s, font-weight 0.3s; /* Add font-weight transition */
+    font-family: 'Nunito Sans', sans-serif; /* ADD THIS LINE */
+}
+
+        .nav-links a:hover {
+            color: #6B7A64; /* Accent color on hover */
+        }
+
+        /* Subtle underline effect */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px; /* Thinner line */
+            background-color: #6B7A64; /* Accent color */
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #8A5A44; /* Heading color */
+            background: none;
+            border: none;
+            padding: 5px;
+            line-height: 1;
+            z-index: 1001;
+            position: relative;
+        }
+        .menu-btn.active {
+           color: #6B7A64; /* Accent color when active */
+        }
+
+/* Style for the currently active navigation link */
+.nav-links a.active-link {
+    font-weight: 700; /* Use bold weight */
+    /* Optional: Slightly change color if desired, but bold might be enough */
+    /* color: #6B7A64; */
+}
+
+/* Ensure the hover underline effect still works well */
+.nav-links a.active-link::after {
+    /* Keep the underline behavior consistent if needed */
+    /* Or remove it for active links if you prefer */
+    /* background-color: transparent; */ /* Example: remove underline */
+}
+
+        /* Hero Section */
+        #hero {
+            /* Use a background color and style text instead of image overlay */
+            background-color: #F7F3EE; /* Theme background */
+            /* Example using a placeholder image similar in tone - REPLACE with actual image URL */
+            background: linear-gradient(rgba(247, 243, 238, 0.1), rgba(247, 243, 238, 0.1)),
+                        url(yoga-bg.jpeg) center/cover no-repeat; /* Placeholder image with theme colors */
+            min-height: 90vh; /* Slightly less than full height */
+            color: #8A5A44; /* Heading color for text */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px; /* Account for header */
+        }
+
+        .hero-content {
+            max-width: 700px; /* Adjust max width */
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem; /* Larger main headline */
+            margin-bottom: 1.5rem;
+            color: #8A5A44; /* Theme heading color */
+            /* text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Very subtle shadow */
+            font-weight: 500; /* Theme weight */
+            /* --- UPDATE TEXT --- */
+            content: "Find stillness within";
+        }
+         .hero-content h1::before { /* Use pseudo element for actual text */
+             content: "Breathe. Be";
+         }
+
+        .hero-content p {
+            font-size: 1.5rem; /* Adjusted size */
+            margin-bottom: 2.5rem; /* More space */
+            font-weight: 300;
+            color: #333333; /* Body text color */
+             /* --- UPDATE TEXT --- */
+             content: "Discover balance, stillness, strength and flexiblity.";
+        }
+        .hero-content p::before { /* Use pseudo element for actual text */
+             content: "Discover balance, stillness, strength and flexiblity.";
+        }
+
+
+        .btn {
+            display: inline-block;
+            background-color: #6B7A64; /* Muted green accent from theme */
+            color: #F7F3EE; /* Light beige text */
+            padding: 14px 30px; /* Adjusted padding */
+            text-decoration: none;
+            border-radius: 6px; /* Slightly rounded corners */
+            transition: all 0.3s ease;
+            font-size: 1rem; /* Adjusted size */
+            font-weight: 400; /* Regular weight */
+            border: 1px solid #6B7A64; /* Border same as background */
+            cursor: pointer;
+            text-transform: uppercase; /* Uppercase button text */
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background-color: #8A5A44; /* Terracotta brown on hover */
+            border-color: #8A5A44;
+            color: #F7F3EE;
+            transform: none; /* Remove transform effect */
+            box-shadow: none; /* Remove shadow effect */
+        }
+        /* --- UPDATE BUTTON TEXT --- */
+        #hero .btn::before {
+            content: "View Classes";
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fff; /* White background for contrast */
+        }
+         #about .container { text-align: center; }
+         /* --- UPDATE TEXT --- */
+          #about h2::before { content: "About"; }
+          #about > .container > p:first-of-type::before { content: "Our studio offers a tranquil space to explore the transformative practice of yoga. We are dedicated guiding you on your way towards inner harmony and well-being."; }
+
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; /* Slightly reduced gap */
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .about-card {
+            background-color: #F7F3EE; /* Theme background for cards */
+            padding: 35px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04); /* Softer shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #EAE0D5; /* Subtle border */
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px); /* Subtle lift */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06); /* Slightly more shadow */
+        }
+
+        .about-icon {
+            font-size: 2.5rem; /* Slightly smaller icon */
+            color: #6B7A64; /* Accent color */
+            margin-bottom: 15px;
+            display: block;
+            /* Keep placeholders or replace with themed SVGs */
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            color: #8A5A44; /* Heading color */
+        }
+        .about-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Classes Section */
+        #classes {
+            background-color: #F7F3EE; /* Theme background */
+        }
+         #classes .container { text-align: center; }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .class-card {
+            background-color: #fff; /* White card background */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04); /* Softer shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #EAE0D5; /* Subtle border */
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px); /* Subtle lift */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .class-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(30%) contrast(90%); /* Apply subtle filter to images */
+        }
+
+        .class-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .class-content-main {
+            flex-grow: 1;
+        }
+
+
+        .class-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #8A5A44; /* Heading color */
+        }
+        .class-content p {
+            font-size: 1rem;
+            color: #555;
+             margin-bottom: 20px;
+        }
+
+
+        .class-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            border-top: 1px solid #EAE0D5; /* Subtle border */
+            padding-top: 15px;
+        }
+
+        .class-time, .class-level {
+            font-size: 0.85rem; /* Smaller details */
+            color: #6B7A64; /* Accent color */
+            background-color: #F7F3EE; /* Theme background */
+            padding: 4px 10px;
+            border-radius: 15px;
+        }
+
+        /* Schedule Section */
+        #schedule {
+            background-color: #fff; /* White background */
+        }
+         #schedule .container { text-align: center; }
+
+        .schedule-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #EAE0D5; /* Subtle border */
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 15px 25px;
+            margin: 0 5px;
+            margin-bottom: -1px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: #555; /* Darker grey for inactive tabs */
+            font-family: 'Lato', sans-serif; /* Match body font */
+            position: relative;
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent; /* Thinner indicator */
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            color: #8A5A44; /* Heading color for active tab */
+            border-bottom-color: #8A5A44;
+            font-weight: 700; /* Bold active tab */
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: #8A5A44;
+            border-bottom-color: #D3C5BC; /* Lighter brown for hover */
+        }
+
+        .schedule-content {
+            display: none;
+            animation: scheduleFadeIn 0.5s ease-out; /* Slightly faster fade */
+        }
+         @keyframes scheduleFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+        .schedule-content.active {
+            display: block;
+        }
+
+        .schedule-table-wrapper {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .schedule-table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* Very subtle shadow */
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #EAE0D5; /* Subtle border */
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 16px 15px; /* Adjusted padding */
+            text-align: left;
+            border-bottom: 1px solid #EAE0D5;
+             white-space: nowrap;
+        }
+
+        .schedule-table th {
+            background-color: #F7F3EE; /* Theme background for header */
+            color: #8A5A44; /* Heading color */
+            font-size: 0.9rem; /* Smaller */
+            font-weight: 700; /* Bold */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .schedule-table tbody tr:hover {
+            background-color: #FBF8F5; /* Very light hover */
+        }
+
+        .schedule-table td:first-child {
+             font-weight: 600; /* Bold time/day */
+             color: #333; /* Darker grey */
+        }
+
+
+        /* Pricing Section */
+        #pricing {
+            background-color: #F7F3EE; /* Theme background */
+        }
+         #pricing .container { text-align: center; }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; /* Adjusted gap */
+            margin-top: 50px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background-color: #fff; /* White card background */
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04); /* Softer shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid #EAE0D5; /* Subtle border */
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #6B7A64; /* Accent color border */
+            box-shadow: 0 8px 20px rgba(107, 122, 100, 0.15); /* Subtle green shadow */
+             transform: scale(1.03); /* Slightly larger */
+             z-index: 1;
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto; /* Auto width */
+            padding: 6px 18px; /* Adjusted padding */
+            background-color: #6B7A64; /* Accent color */
+            color: #F7F3EE; /* Light text */
+            font-size: 0.85rem; /* Smaller font */
+            font-weight: 700;
+            border-radius: 0 0 8px 8px;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+        .pricing-card:hover:not(.featured) {
+            transform: translateY(-5px) scale(1.01); /* Subtle hover */
+             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+             z-index: 2;
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-3px) scale(1.04); /* Slightly more pronounced hover */
+            box-shadow: 0 12px 25px rgba(107, 122, 100, 0.2);
+        }
+
+        .pricing-card-content {
+            padding-top: 35px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+
+        .pricing-card h3 {
+             font-size: 1.6rem;
+             margin-bottom: 8px; /* Reduced margin */
+             margin-top: 0;
+             color: #8A5A44; /* Heading color */
+        }
+
+        .pricing-tagline {
+            color:#666;
+            font-size: 0.9rem;
+            min-height: 2.7em;
+            margin-bottom: 15px;
+        }
+
+
+        .price {
+            font-size: 2.8rem; /* Slightly smaller price */
+            color: #8A5A44; /* Heading color */
+            margin: 10px 0 20px;
+            font-weight: 500; /* Medium weight */
+            font-family: 'Lato', sans-serif; /* Match body font */
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400; /* Normal weight */
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+            padding-left: 15px; /* Reduced indent */
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            margin-bottom: 12px; /* Reduced space */
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.95rem;
+        }
+         .pricing-features li::before {
+             content: '✓'; /* Simple checkmark */
+             position: absolute;
+             left: 0;
+             color: #6B7A64; /* Accent color */
+             font-weight: bold;
+             top: 1px; /* Adjust position */
+         }
+
+        .pricing-card .btn {
+            margin-top: auto;
+            width: 100%; /* Full width button */
+            padding: 12px 25px; /* Adjusted padding */
+        }
+
+
+        /* Testimonials Section */
+        #testimonials {
+            background-color: #fff; /* White background */
+             position: relative;
+             overflow: hidden;
+        }
+        #testimonials .container { text-align: center; }
+
+        .testimonials-container {
+            max-width: 700px; /* Narrower */
+            margin: 0 auto;
+            position: relative;
+            padding-top: 30px;
+             min-height: 420px; /* Adjusted height */
+             display: flex;
+             align-items: center;
+        }
+
+        .testimonial-slide {
+             width: 100%;
+             flex: 0 0 100%;
+             opacity: 0;
+             position: absolute;
+             top: 0;
+             left: 0;
+             padding: 20px 0;
+             transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+             transform: translateX(20px); /* Smaller offset */
+             visibility: hidden;
+        }
+
+        .testimonial-slide.active {
+             opacity: 1;
+             transform: translateX(0);
+             position: relative;
+             visibility: visible;
+        }
+
+        .testimonial-content {
+            background-color: #F7F3EE; /* Theme background */
+            padding: 35px; /* Adjusted padding */
+            border-radius: 8px;
+            position: relative;
+            margin-bottom: 50px; /* Reduced space */
+             box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Softer shadow */
+             text-align: center;
+             border: 1px solid #EAE0D5; /* Subtle border */
+        }
+
+        .testimonial-content::before {
+            content: '“';
+            font-family: 'Playfair Display', serif; /* Heading font */
+            font-size: 4.5rem; /* Slightly smaller */
+            color: #6B7A64; /* Accent color */
+            position: absolute;
+            top: -5px; /* Adjusted position */
+            left: 10px; /* Adjusted position */
+            opacity: 0.15; /* More subtle */
+            line-height: 1;
+        }
+
+         .testimonial-quote {
+            font-style: italic;
+            color: #333; /* Darker quote text */
+            margin-bottom: 20px;
+            font-size: 1.1rem; /* Adjusted size */
+            line-height: 1.7;
+         }
+
+        .testimonial-info {
+            margin-top: 20px;
+        }
+
+        .testimonial-img {
+            width: 80px; /* Smaller image */
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            border: 3px solid #6B7A64; /* Accent color border */
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-name {
+            font-weight: 700; /* Bold name */
+            color: #8A5A44; /* Heading color */
+            font-size: 1.05rem; /* Adjusted size */
+            display: block;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem; /* Smaller role */
+            color: #666;
+             display: block;
+             text-transform: uppercase; /* Uppercase role */
+             letter-spacing: 0.5px;
+        }
+
+         /* Testimonial Controls Styling */
+        .testimonial-controls {
+             position: absolute;
+             bottom: 15px; /* Position lower */
+             left: 50%;
+             transform: translateX(-50%);
+             z-index: 10;
+             display: flex;
+             align-items: center;
+         }
+
+         .testimonial-btn {
+             background: #6B7A64; /* Accent color */
+             border: none;
+             color: #F7F3EE; /* Light text */
+             font-size: 1.2rem; /* Smaller arrows */
+             cursor: pointer;
+             border-radius: 50%;
+             width: 35px; /* Smaller buttons */
+             height: 35px;
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+             margin: 0 8px; /* Reduced margin */
+             transition: background-color 0.3s, transform 0.3s;
+             line-height: 1;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+         }
+
+         .testimonial-btn:hover {
+             background-color: #8A5A44; /* Heading color on hover */
+             transform: scale(1.05); /* Subtle scale */
+         }
+
+         /* Testimonial Dots Styling */
+         .testimonial-dots {
+             display: flex;
+             justify-content: center;
+             margin: 0 12px;
+         }
+
+         .dot {
+             width: 8px; /* Smaller dots */
+             height: 8px;
+             border-radius: 50%;
+             background-color: #D3C5BC; /* Lighter brown inactive */
+             margin: 0 4px; /* Reduced margin */
+             cursor: pointer;
+             transition: background-color 0.3s, transform 0.3s;
+         }
+
+         .dot.active {
+             background-color: #6B7A64; /* Accent color active */
+              transform: scale(1.2);
+         }
+          .dot:hover:not(.active){
+              background-color: #bcaea1; /* Slightly darker hover */
+          }
+
+
+        /* Contact Section */
+        #contact {
+            background-color: #F7F3EE; /* Theme background */
+            padding-bottom: 100px;
+        }
+         #contact .container { text-align: initial; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: flex-start;
+             margin-top: 50px;
+        }
+
+        .contact-info {
+             text-align: left;
+        }
+
+
+        .contact-info h2 {
+            text-align: left;
+            margin-bottom: 25px; /* Adjusted */
+        }
+
+        /* Remove heading underline */
+        /* .contact-info h2::after {
+            left: 0;
+            transform: none;
+        } */
+         .contact-info p {
+             margin-bottom: 30px;
+             color: #555;
+         }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem; /* Smaller icon */
+            color: #6B7A64; /* Accent color */
+            margin-right: 15px; /* Reduced space */
+            width: 35px; /* Adjusted width */
+            text-align: center;
+             /* Replace text below with actual icons (e.g., Font Awesome <i class="...">) */
+        }
+
+        .contact-text {
+            color: #555; /* Darker text */
+            font-size: 1rem;
+        }
+
+        .contact-text strong {
+            display: block;
+            color: #8A5A44; /* Heading color */
+            margin-bottom: 3px;
+            font-size: 1.05rem; /* Adjusted size */
+            font-weight: 700; /* Bold */
+        }
+
+        .contact-form {
+            background-color: #fff; /* White form background */
+            padding: 35px; /* Adjusted padding */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            border: 1px solid #EAE0D5; /* Subtle border */
+        }
+
+        .contact-form h3 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: #8A5A44; /* Heading color */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+         .form-group label {
+            display: block;
+            margin-bottom: 6px; /* Reduced space */
+            font-weight: 700; /* Bold label */
+            color: #555;
+            font-size: 0.85rem; /* Smaller label */
+            text-transform: uppercase; /* Uppercase label */
+            letter-spacing: 0.5px;
+         }
+
+
+        .form-control {
+            width: 100%;
+            padding: 12px; /* Adjusted padding */
+            border: 1px solid #D3C5BC; /* Lighter brown border */
+            border-radius: 6px; /* Match button radius */
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-family: 'Lato', sans-serif; /* Use body font */
+            background-color: #fff;
+            color: #333;
+        }
+
+        .form-control:focus {
+            border-color: #6B7A64; /* Accent color focus */
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(107, 122, 100, 0.15); /* Accent focus ring */
+        }
+
+        textarea.form-control {
+            min-height: 130px; /* Adjusted height */
+            resize: vertical;
+        }
+
+        .submit-btn { /* Inherits .btn */
+            background-color: #6B7A64; /* Accent green */
+            color: #F7F3EE; /* Light text */
+            border: 1px solid #6B7A64;
+            padding: 14px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #8A5A44; /* Heading color on hover */
+             border-color: #8A5A44;
+             box-shadow: none;
+             transform: none;
+        }
+        /* Form feedback message style */
+        .form-message {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .form-message.success { background-color: #e6f0e3; color: #4CAF50; display: block; border: 1px solid #c8e6c9; }
+        .form-message.error { background-color: #fbe9e7; color: #d93025; display: block; border: 1px solid #ffccbc; }
+
+
+        /* Footer */
+        footer {
+            background-color: #8A5A44; /* Heading color background */
+            color: rgba(247, 243, 238, 0.8); /* Light beige text, slightly transparent */
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        footer .container { text-align: center; }
+
+
+        .footer-logo {
+            font-size: 2rem; /* Adjusted size */
+            margin-bottom: 15px; /* Reduced margin */
+            color: #F7F3EE; /* Light text */
+             font-family: "Nunito Sans", sans-serif;
+             font-weight: bold;
+             text-decoration: none;
+             display: inline-block;
+        }
+
+/* Footer Logo Hover Fix */
+.footer-logo:hover {
+    color: #F7F3EE; /* Keep the original light color */
+    /* Or you could choose a slightly different visible color if you want a hover effect */
+    /* color: #D3C5BC; */ /* Example: A lighter accent */
+    /* opacity: 0.9; */   /* Example: Slightly fade it */
+}
+
+        .footer-logo span {
+            color: #D3C5BC; /* Lighter accent for footer */
+        }
+        .footer-tagline {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            color: rgba(247, 243, 238, 0.6); /* More transparent */
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px; /* Smaller */
+            height: 40px;
+            background-color: rgba(247, 243, 238, 0.1); /* Subtle background */
+            border-radius: 50%;
+            margin: 0 10px; /* Reduced space */
+            color: #F7F3EE; /* Light text */
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem; /* Adjust icon size */
+        }
+        .social-icon svg { /* Target SVGs inside */
+            width: 18px; height: 18px; fill: currentColor;
+        }
+
+        .social-icon:hover {
+            background-color: #6B7A64; /* Accent green hover */
+            transform: translateY(-3px); /* Subtle lift */
+            color: #F7F3EE; /* Keep text light */
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 30px 0;
+             flex-wrap: wrap;
+             padding: 0;
+        }
+
+        .footer-nav li {
+            margin: 5px 15px;
+        }
+
+        .footer-nav a {
+            color: rgba(247, 243, 238, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+             font-size: 0.95rem; /* Slightly smaller */
+        }
+
+        .footer-nav a:hover {
+            color: #F7F3EE; /* Full opacity on hover */
+        }
+
+        .copyright {
+            margin-top: 40px;
+            color: rgba(247, 243, 238, 0.6);
+            font-size: 0.85rem; /* Smaller copyright */
+             border-top: 1px solid rgba(247, 243, 238, 0.1); /* Very subtle border */
+             padding-top: 30px;
+        }
+
+        /* Newsletter (Inside Footer) */
+        .newsletter {
+            padding: 20px 0; /* Reduced padding */
+            border-radius: 8px;
+            margin: 30px auto; /* Adjusted margin */
+            max-width: 550px; /* Adjusted width */
+        }
+
+        .newsletter h3 {
+            color: #F7F3EE; /* Light text */
+            margin-bottom: 15px; /* Reduced space */
+            font-size: 1.3rem; /* Adjusted size */
+            font-weight: 500; /* Medium weight */
+        }
+
+        .newsletter-form {
+            display: flex;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Softer shadow */
+            border-radius: 6px; /* Match buttons */
+            overflow: hidden;
+             background-color: #fff; /* White background */
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 20px; /* Adjusted padding */
+            border: none;
+            font-size: 1rem;
+            outline: none;
+             color: #333;
+             background: none;
+             font-family: 'Lato', sans-serif;
+        }
+        .newsletter-input::placeholder {
+            color: #999;
+        }
+
+
+        .newsletter-btn {
+            background-color: #6B7A64; /* Accent color */
+            color: #F7F3EE; /* Light text */
+            border: none;
+            padding: 12px 25px; /* Adjusted padding */
+            cursor: pointer;
+            font-size: 0.9rem; /* Smaller text */
+            font-weight: 700; /* Bold */
+            transition: background-color 0.3s;
+             white-space: nowrap;
+             text-transform: uppercase;
+             letter-spacing: 0.5px;
+        }
+
+        .newsletter-btn:hover {
+            background-color: #5a6853; /* Darker accent green */
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 25px; /* Adjusted position */
+            right: 25px; /* Adjusted position */
+            background-color: #6B7A64; /* Accent color */
+            color: #F7F3EE; /* Light text */
+            width: 45px; /* Smaller */
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 999;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            font-size: 1.3rem; /* Adjusted arrow size */
+        }
+
+        .back-to-top.show {
+            opacity: 0.8; /* Slightly transparent */
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #8A5A44; /* Heading color hover */
+            transform: translateY(-3px);
+            opacity: 1;
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+             html { scroll-padding-top: 70px; }
+            .container { max-width: 960px; }
+             .classes-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+             .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } /* Adjusted */
+             .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+             .contact-info { text-align: center; }
+             .contact-info h2 { text-align: center; }
+             .contact-method { justify-content: center; }
+             .testimonial-controls { position: static; transform: none; margin-top: 30px; margin-bottom: 20px; }
+             .testimonials-container { min-height: auto; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            .hero-content h1 { font-size: 3rem; }
+            .hero-content p { font-size: 1.1rem;}
+            section { padding: 60px 0; }
+            nav { padding: 10px 0; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                max-width: 80%;
+                height: 100vh;
+                background-color: #F7F3EE; /* Theme background for menu */
+                flex-direction: column;
+                padding: 100px 20px 20px;
+                transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+                text-align: center;
+                overflow-y: auto;
+                z-index: 1000;
+            }
+             body.nav-active { overflow: hidden; }
+            .nav-links.active { right: 0; }
+            .nav-links li { margin: 18px 0; } /* Adjusted */
+             .nav-links a { font-size: 1.2rem; color: #8A5A44;} /* Heading color links */
+             .nav-links a:hover { color: #6B7A64;} /* Accent hover */
+            .menu-btn { display: block; }
+            .about-grid, .pricing-grid { grid-template-columns: 1fr; gap: 25px; } /* Adjusted */
+            .pricing-card { transform: scale(1) !important; margin: 0 auto; max-width: 400px; }
+             .pricing-card.featured { order: -1; }
+            .footer-nav { flex-direction: column; }
+            .footer-nav li { margin: 8px 0; } /* Adjusted */
+             .social-icon { width: 38px; height: 38px; margin: 0 8px; }
+             .social-icon svg { width: 16px; height: 16px; }
+            .schedule-tabs { justify-content: flex-start; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; border-bottom: none; padding-left: 10px; margin-left: -20px; margin-right: -20px; padding-bottom: 5px;}
+             .schedule-tabs::-webkit-scrollbar { display: none; }
+             .schedule-tabs { scrollbar-width: none; }
+             .tab-btn { padding: 12px 18px; font-size: 1rem; margin-bottom: 0; }
+             .schedule-table th, .schedule-table td { padding: 12px 10px; font-size: 0.9rem; }
+             .contact-grid { gap: 30px; }
+        }
+
+        @media (max-width: 576px) {
+            .container { padding: 0 15px; }
+             .hero-content h1 { font-size: 2.5rem; }
+             .hero-content p { font-size: 1rem;}
+             html { scroll-padding-top: 60px; }
+             nav { padding: 8px 0; }
+             .logo { font-size: 1.5rem;}
+             .logo-icon { height: 28px; }
+              .newsletter-form { flex-direction: column; box-shadow: none; background: none; }
+            .newsletter-input { border-radius: 6px !important; margin-bottom: 10px; padding: 12px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.08); background-color: white; border: 1px solid #D3C5BC;}
+            .newsletter-btn { border-radius: 6px !important; width: 100%; padding: 12px 20px; }
+             .pricing-card { padding: 30px 20px; }
+             .price { font-size: 2.5rem; }
+             .pricing-features { padding-left: 10px; }
+             .testimonial-content { padding: 30px 20px;}
+             .testimonial-quote { font-size: 1rem; }
+             .testimonial-img { width: 70px; height: 70px; border-width: 2px;}
+             .testimonial-controls { margin-top: 20px;}
+             .contact-form { padding: 25px; }
+             .contact-grid { gap: 20px; }
+             footer { padding: 40px 0 20px; }
+             .footer-logo { font-size: 1.8rem; }
+             .footer-nav a { font-size: 0.9rem; }
+             .copyright { font-size: 0.8rem; padding-top: 20px; }
+             .back-to-top { bottom: 15px; right: 15px; width: 40px; height: 40px; font-size: 1.2rem;}
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo">
+                    Prāṇotthāna<span></span>
+                </a>
+                <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <!-- Text updated via CSS pseudo-elements for demonstration -->
+            <h1></h1>
+            <p></p>
+            <a href="#classes" class="btn"></a> <!-- Text updated via CSS -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+             <!-- Text updated via CSS pseudo-elements for demonstration -->
+            <h2></h2>
+            <p></p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">[🧘]</div> <!-- Simple text placeholder -->
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from certified teachers dedicated to guiding you safely and effectively.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">[🌿]</div> <!-- Simple text placeholder -->
+                    <h3>Peaceful Sanctuary</h3>
+                    <p>Our studio provides a calm space designed to help you disconnect and find focus.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">[💖]</div> <!-- Simple text placeholder -->
+                    <h3>Community Focused</h3>
+                    <p>Become part of a supportive community encouraging growth and connection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section (Content remains similar, styling updated) -->
+    <section id="classes">
+        <div class="container">
+            <h2>Our Diverse Classes</h2>
+            <p>From energizing flows to calming practices, discover the perfect class for your journey.</p>
+            <div class="classes-grid">
+                <!-- Class Card 1 -->
+                <div class="class-card">
+                    <img src="https://via.placeholder.com/400x320/D3C5BC/8A5A44?text=Hatha+Yoga" alt="Woman in Hatha Yoga Pose" class="class-img">
+                    <div class="class-content">
+                        <div class="class-content-main">
+                            <h3>Hatha Yoga</h3>
+                            <p>Build a strong foundation. Focuses on fundamental postures, alignment, and breath awareness. Ideal for beginners.</p>
+                        </div>
+                        <div class="class-details">
+                            <span class="class-time">🕒 60 min</span>
+                            <span class="class-level">⚪ All Levels</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Class Card 2 -->
+                <div class="class-card">
+                    <img src="https://via.placeholder.com/400x320/C1AC95/F7F3EE?text=Vinyasa+Flow" alt="Dynamic Vinyasa Flow Sequence" class="class-img">
+                    <div class="class-content">
+                         <div class="class-content-main">
+                            <h3>Vinyasa Flow</h3>
+                            <p>Fluid movement synchronized with breath. A dynamic, creative sequence to build heat, strength, and flexibility.</p>
+                         </div>
+                        <div class="class-details">
+                            <span class="class-time">🕒 75 min</span>
+                            <span class="class-level">🟠 Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Class Card 3 -->
+                <div class="class-card">
+                    <img src="https://via.placeholder.com/400x320/A58D7F/F7F3EE?text=Yin+Yoga" alt="Person Holding Yin Yoga Pose" class="class-img">
+                    <div class="class-content">
+                         <div class="class-content-main">
+                            <h3>Yin Yoga</h3>
+                            <p>Slow down and deepen your stretch. Targets connective tissues with longer-held, passive poses. Deeply relaxing.</p>
+                         </div>
+                        <div class="class-details">
+                            <span class="class-time">🕒 90 min</span>
+                            <span class="class-level">⚪ All Levels</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Class Card 4 -->
+                 <div class="class-card">
+                    <img src="https://via.placeholder.com/400x320/8A5A44/F7F3EE?text=Power+Yoga" alt="Strong Power Yoga Pose" class="class-img">
+                    <div class="class-content">
+                        <div class="class-content-main">
+                            <h3>Power Yoga</h3>
+                            <p>An invigorating, fitness-based approach to Vinyasa. Builds internal heat, increases stamina, strength, and flexibility.</p>
+                        </div>
+                        <div class="class-details">
+                            <span class="class-time">🕒 60 min</span>
+                            <span class="class-level">🔴 Advanced</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Class Card 5 -->
+                 <div class="class-card">
+                    <img src="https://via.placeholder.com/400x320/B8AFAF/F7F3EE?text=Restorative" alt="Relaxing Restorative Yoga with Props" class="class-img">
+                    <div class="class-content">
+                         <div class="class-content-main">
+                            <h3>Restorative Yoga</h3>
+                            <p>Ultimate relaxation. Gentle poses fully supported by props allow the body and mind to release tension and stress.</p>
+                         </div>
+                        <div class="class-details">
+                            <span class="class-time">🕒 75 min</span>
+                            <span class="class-level">⚪ All Levels</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Class Card 6 -->
+                 <div class="class-card">
+                    <img src="https://via.placeholder.com/400x320/EAE0D5/8A5A44?text=Meditation" alt="Person Meditating Peacefully" class="class-img">
+                    <div class="class-content">
+                         <div class="class-content-main">
+                            <h3>Mindful Meditation</h3>
+                            <p>Cultivate inner calm and awareness. Guided sessions exploring various techniques like breathwork and visualization.</p>
+                         </div>
+                        <div class="class-details">
+                            <span class="class-time">🕒 45 min</span>
+                            <span class="class-level">⚪ All Levels</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section (Content remains similar, styling updated) -->
+    <section id="schedule">
+        <div class="container">
+            <h2>Weekly Class Schedule</h2>
+            <p>Find the perfect time to join us for your practice.</p>
+            <div class="schedule-tabs">
+                <button class="tab-btn active" data-day="monday">Monday</button>
+                <button class="tab-btn" data-day="tuesday">Tuesday</button>
+                <button class="tab-btn" data-day="wednesday">Wednesday</button>
+                <button class="tab-btn" data-day="thursday">Thursday</button>
+                <button class="tab-btn" data-day="friday">Friday</button>
+                <button class="tab-btn" data-day="weekend">Weekend</button>
+            </div>
+
+             <div class="schedule-table-wrapper">
+                <!-- Schedule Content Panels (JS toggles 'active' class) -->
+                <div class="schedule-content active" id="monday">
+                    <table class="schedule-table">
+                        <thead> <tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th></tr> </thead>
+                        <tbody>
+                            <tr> <td>7:00 - 8:00 AM</td> <td>Morning Hatha</td> <td>Sarah Chen</td> <td>All Levels</td> </tr>
+                            <tr><td>9:00 - 10:15 AM</td><td>Vinyasa Flow</td><td>Mark Evans</td><td>Intermediate</td></tr>
+                            <tr><td>12:00 - 1:00 PM</td><td>Lunchtime Power Yoga</td><td>Lena Petrova</td><td>Advanced</td></tr>
+                            <tr><td>5:30 - 6:30 PM</td><td>Gentle Yoga</td><td>Sarah Chen</td><td>Beginner</td></tr>
+                            <tr><td>7:00 - 8:30 PM</td><td>Yin Yoga</td><td>David Lee</td><td>All Levels</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="schedule-content" id="tuesday">
+                     <table class="schedule-table">
+                         <thead> <tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th></tr> </thead>
+                        <tbody>
+                            <tr> <td>8:00 - 9:00 AM</td> <td>Power Yoga</td> <td>Lena Petrova</td><td>Advanced</td> </tr>
+                            <tr><td>10:00 - 11:00 AM</td><td>Hatha Yoga</td><td>David Lee</td><td>All Levels</td></tr>
+                            <tr><td>6:00 - 7:15 PM</td><td>Vinyasa Flow</td><td>Mark Evans</td><td>Intermediate</td></tr>
+                            <tr><td>7:30 - 8:30 PM</td><td>Restorative Yoga</td><td>Sarah Chen</td><td>All Levels</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <div class="schedule-content" id="wednesday">
+                     <table class="schedule-table">
+                          <thead> <tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th></tr> </thead>
+                         <tbody>
+                            <tr> <td>7:00 - 8:00 AM</td> <td>Morning Vinyasa</td> <td>Mark Evans</td> <td>Intermediate</td> </tr>
+                            <tr><td>9:00 - 10:00 AM</td><td>Mindful Meditation</td><td>David Lee</td><td>All Levels</td></tr>
+                            <tr><td>12:00 - 1:00 PM</td><td>Lunch Express Hatha</td><td>Sarah Chen</td><td>All Levels</td></tr>
+                            <tr><td>6:30 - 7:45 PM</td><td>Power Yoga</td><td>Lena Petrova</td><td>Advanced</td></tr>
+                        </tbody>
+                    </table>
+                 </div>
+                  <div class="schedule-content" id="thursday">
+                      <table class="schedule-table">
+                           <thead> <tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th></tr> </thead>
+                         <tbody>
+                            <tr><td>8:00 - 9:15 AM</td><td>Vinyasa Flow</td><td>Mark Evans</td><td>Intermediate</td></tr>
+                            <tr><td>10:00 - 11:00 AM</td><td>Gentle Yoga</td><td>Sarah Chen</td><td>Beginner</td></tr>
+                            <tr><td>5:30 - 6:30 PM</td><td>Hatha Yoga</td><td>David Lee</td><td>All Levels</td></tr>
+                            <tr><td>7:00 - 8:30 PM</td><td>Restorative & Yin</td><td>Lena Petrova</td><td>All Levels</td></tr>
+                        </tbody>
+                    </table>
+                  </div>
+                   <div class="schedule-content" id="friday">
+                      <table class="schedule-table">
+                           <thead> <tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th></tr> </thead>
+                          <tbody>
+                            <tr> <td>7:00 - 8:00 AM</td> <td>Power Yoga</td> <td>Lena Petrova</td> <td>Advanced</td> </tr>
+                            <tr><td>9:00 - 10:00 AM</td><td>Vinyasa Flow</td><td>Mark Evans</td><td>Intermediate</td></tr>
+                            <tr><td>12:00 - 1:00 PM</td><td>Mindful Meditation</td><td>David Lee</td><td>All Levels</td></tr>
+                            <tr><td>6:00 - 7:00 PM</td><td>Happy Hour Hatha</td><td>Sarah Chen</td><td>All Levels</td></tr>
+                        </tbody>
+                    </table>
+                   </div>
+                    <div class="schedule-content" id="weekend">
+                       <table class="schedule-table">
+                          <thead> <tr><th>Day</th><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th></tr> </thead>
+                          <tbody>
+                             <tr><td>Sat</td> <td>9:00 - 10:30 AM</td><td>Weekend Warrior Vinyasa</td><td>Mark Evans</td><td>Int/Adv</td></tr>
+                             <tr><td>Sat</td><td>11:00 AM - 12:00 PM</td><td>Beginner Basics</td><td>Sarah Chen</td><td>Beginner</td></tr>
+                             <tr><td>Sat</td><td>4:00 - 5:30 PM</td><td>Deep Stretch Yin</td><td>David Lee</td><td>All Levels</td></tr>
+                             <tr><td>Sun</td><td>10:00 - 11:15 AM</td><td>Sunday Slow Flow</td><td>Lena Petrova</td><td>All Levels</td></tr>
+                             <tr><td>Sun</td><td>5:00 - 6:15 PM</td><td>Restorative Relaxation</td><td>Sarah Chen</td><td>All Levels</td></tr>
+                         </tbody>
+                     </table>
+                    </div>
+            </div> <!-- /schedule-table-wrapper -->
+        </div>
+    </section>
+
+    <!-- Pricing Section (Content remains similar, styling updated) -->
+    <section id="pricing">
+        <div class="container">
+            <h2>Membership Options</h2>
+            <p>Choose the plan that best fits your practice and commitment.</p>
+            <div class="pricing-grid">
+                <!-- Pricing Card 1: Drop-In -->
+                <div class="pricing-card">
+                    <div class="pricing-card-content">
+                         <h3>Single Class</h3>
+                         <p class="pricing-tagline">Perfect for occasional visits</p>
+                        <div class="price">$20<span>/class</span></div>
+                        <ul class="pricing-features">
+                            <li>Access to any single class</li>
+                            <li>Mat rental included</li>
+                            <li>Book up to 7 days in advance</li>
+                            <li>No commitment required</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+                <!-- Pricing Card 2: Class Pack (Featured) -->
+                <div class="pricing-card featured">
+                     <div class="pricing-card-content">
+                        <h3>10 Class Pack</h3>
+                        <p class="pricing-tagline">Best value for regular attendees</p>
+                        <div class="price">$150<span>/10 classes</span></div>
+                        <ul class="pricing-features">
+                            <li>Access to any 10 classes</li>
+                            <li>Valid for 3 months</li>
+                            <li>Mat rental included</li>
+                            <li>Priority booking available</li>
+                            <li>Saves $5 per class!</li>
+                        </ul>
+                     </div>
+                    <a href="#contact" class="btn">Purchase Pack</a>
+                </div>
+                <!-- Pricing Card 3: Unlimited Monthly -->
+                <div class="pricing-card">
+                     <div class="pricing-card-content">
+                        <h3>Unlimited Monthly</h3>
+                         <p class="pricing-tagline">Practice as often as you like!</p>
+                        <div class="price">$120<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Unlimited scheduled classes</li>
+                            <li>Free mat storage</li>
+                            <li>10% off retail & workshops</li>
+                            <li>Easy auto-renewal</li>
+                            <li>One free guest pass monthly</li>
+                        </ul>
+                     </div>
+                    <a href="#contact" class="btn">Go Unlimited</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Content remains similar, styling updated) -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Community Says</h2>
+            <div class="testimonials-container">
+                 <!-- Testimonial Slides -->
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">"Prāṇotthāna is my sanctuary! The instructors are amazing, the space is beautiful, and I always leave feeling refreshed and centered. It's more than just yoga; it's a community."</p>
+                    </div>
+                    <div class="testimonial-info">
+                        <img src="https://via.placeholder.com/150/D3C5BC/8A5A44?text=JS" alt="Jessica S." class="testimonial-img">
+                        <span class="testimonial-name">Jessica S.</span>
+                        <span class="testimonial-role">Regular Member</span>
+                    </div>
+                </div>
+                 <div class="testimonial-slide">
+                     <div class="testimonial-content">
+                         <p class="testimonial-quote">"I was nervous starting yoga, but Prāṇotthāna made me feel instantly welcome. The beginner classes were perfect, and I've gained so much strength and flexibility. Highly recommend!"</p>
+                     </div>
+                     <div class="testimonial-info">
+                         <img src="https://via.placeholder.com/150/C1AC95/F7F3EE?text=MB" alt="Michael B." class="testimonial-img">
+                         <span class="testimonial-name">Michael B.</span>
+                         <span class="testimonial-role">New Student</span>
+                     </div>
+                 </div>
+                  <div class="testimonial-slide">
+                     <div class="testimonial-content">
+                         <p class="testimonial-quote">"The restorative classes are pure magic. After a stressful week, an hour and a half here melts all my tension away. The attention to detail and caring atmosphere are unmatched."</p>
+                     </div>
+                      <div class="testimonial-info">
+                         <img src="https://via.placeholder.com/150/EAE0D5/8A5A44?text=AR" alt="Anna R." class="testimonial-img">
+                         <span class="testimonial-name">Anna R.</span>
+                         <span class="testimonial-role">Wellness Enthusiast</span>
+                     </div>
+                 </div>
+            </div> <!-- testimonials-container -->
+
+            <!-- Testimonial Navigation -->
+             <div class="testimonial-controls">
+                 <button class="testimonial-btn" id="prevBtn" aria-label="Previous testimonial">❮</button>
+                 <div class="testimonial-dots" id="testimonialDots">
+                     <!-- Dots will be generated by JS -->
+                 </div>
+                 <button class="testimonial-btn" id="nextBtn" aria-label="Next testimonial">❯</button>
+            </div>
+        </div> <!-- container -->
+    </section>
+
+    <!-- Contact Section (Content remains similar, styling updated) -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We'd love to hear from you! Whether you have questions about classes, membership, or just want to say hello, reach out anytime.</p>
+                    <div class="contact-method">
+                        <span class="contact-icon">[📍]</span> <!-- Simple text placeholder -->
+                        <div class="contact-text">
+                            <strong>Our Studio</strong>
+                            123 Zen Lane, Harmony City, CA 90210
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                         <span class="contact-icon">[✉️]</span> <!-- Simple text placeholder -->
+                        <div class="contact-text">
+                            <strong>Email Us</strong>
+                            <a href="mailto:info@pranotthana.com">info@pranotthana.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                         <span class="contact-icon">[📞]</span> <!-- Simple text placeholder -->
+                        <div class="contact-text">
+                            <strong>Call Us</strong>
+                            <a href="tel:555-123-4567">(555) 123-4567</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div class="form-message" id="contactFormMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#hero" class="footer-logo">
+                 Prāṇotthāna<span></span>
+            </a>
+             <p class="footer-tagline">Your journey to balance starts here.</p>
+
+             <!-- Newsletter Signup -->
+             <div class="newsletter">
+                 <h3>Stay Connected</h3>
+                 <form id="newsletterForm" action="#" method="POST" class="newsletter-form">
+                     <input type="email" name="newsletter_email" placeholder="Enter your email" class="newsletter-input" required>
+                     <button type="submit" class="newsletter-btn">Subscribe</button>
+                 </form>
+                 <div class="form-message" id="newsletterFormMessage" style="max-width: 90%; margin: 15px auto 0;"></div>
+             </div>
+
+             <div class="social-links">
+                 <!-- Replace # with actual links and use themed SVGs -->
+                 <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.18 10h-1.6v7h-3v-7H8v-2.5h1.58V8.13c0-1.52 1.17-2.63 2.86-2.63h2.01V8H13.3c-.35 0-.49.17-.49.54v1.96h2.18L14.18 12z"/></svg></a>
+                 <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2C8.74 2 8.33 2.02 7.38 2.06c-.95.05-1.6.21-2.18.42-.6.22-1.06.55-1.53.99-.47.47-.8.94-1.01 1.53-.21.58-.37 1.23-.41 2.18C2.02 7.67 2 8.74 2 12s.02 4.33.06 5.28c.05.95.21 1.6.41 2.18.22.6.55 1.06.99 1.53.47.47.94.8 1.53 1.01.58.21 1.23.37 2.18.41C7.67 21.98 8.74 22 12 22s4.33-.02 5.28-.06c.95-.05 1.6-.21 2.18-.41.6-.22 1.06-.55 1.53-.99.47-.47.8-.94 1.01-1.53.21-.58.37-1.23.41-2.18C21.98 16.33 22 15.26 22 12s-.02-4.33-.06-5.28c-.05-.95-.21-1.6-.41-2.18-.22-.6-.55-1.06-.99-1.53-.47-.47-.94-.8-1.53-1.01-.58-.21-1.23-.37-2.18-.41C16.33 2.02 15.26 2 12 2zm0 3c3.25 0 3.64.01 4.92.07.96.04 1.5.24 1.84.38.44.18.76.43 1.1.78.34.34.59.65.78 1.1.13.34.33.88.38 1.84.06 1.28.07 1.67.07 4.92s-.01 3.64-.07 4.92c-.04.96-.24 1.5-.38 1.84-.18.44-.43.76-.78 1.1-.34.34-.65.59-1.1.78-.34.13-.88.33-1.84.38-1.28.06-1.67.07-4.92.07s-3.64-.01-4.92-.07c-.96-.04-1.5-.24-1.84-.38-.44-.18-.76-.43-1.1-.78-.34-.34-.59-.65-.78-1.1-.13-.34-.33-.88-.38-1.84-.06-1.28-.07-1.67-.07-4.92s.01-3.64.07-4.92c.04-.96.24 1.5.38 1.84.18-.44.43.76.78-1.1.34-.34.65-.59 1.1-.78.34-.13.88-.33 1.84-.38C8.36 5.01 8.75 5 12 5zm0 4c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm6-8.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg></a>
+                 <a href="#" class="social-icon" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.34-1.6.57-2.46.66.88-.53 1.56-1.37 1.88-2.34-.82.49-1.73.85-2.7 1.02-.77-.82-1.88-1.33-3.08-1.33-2.34 0-4.23 1.9-4.23 4.23 0 .33.04.66.11.97-3.52-.18-6.64-1.86-8.73-4.43-.36.62-.57 1.35-.57 2.13 0 1.47.75 2.76 1.88 3.52-.7-.02-1.36-.21-1.93-.53v.05c0 2.05 1.46 3.76 3.39 4.15-.35.1-.73.15-1.12.15-.27 0-.53-.03-.79-.08.54 1.68 2.1 2.9 3.95 2.93-1.45 1.14-3.27 1.81-5.25 1.81-.34 0-.68-.02-1.01-.06 1.87 1.2 4.09 1.89 6.48 1.89 7.78 0 12.04-6.45 12.04-12.05 0-.18 0-.36-.01-.54.83-.6 1.54-1.35 2.11-2.19z"/></svg></a>
+                 <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.78 10.5l-5.6 2.89c-.36.18-.8-.07-.8-.48V9.09c0-.41.44-.66.8-.48l5.6 2.89c.36.19.36.71 0 .89z"/></svg></a>
+             </div>
+
+        <ul class="footer-nav">
+                 <li><a href="#hero">Home</a></li>
+                 <li><a href="#about">About</a></li>      <!-- Corrected text -->
+                 <li><a href="#classes">Classes</a></li>
+                 <li><a href="#schedule">Schedule</a></li>
+                 <li><a href="#pricing">Pricing</a></li>
+                 <li><a href="#testimonials">Testimonials</a></li> <!-- Added Testimonials link -->
+                 <li><a href="#contact">Contact</a></li>
+                 <!-- Privacy Policy link removed -->
+            </ul>
+            <div class="copyright">
+                &copy; <span id="year"></span> Prāṇotthāna Yoga & Wellness. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#header" class="back-to-top" aria-label="Back to top">↑</a>
+
+
+    <!-- JavaScript (No functional changes needed for the theme, keep as is) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- Shared Utility Functions ---
+        const throttle = (func, limit) => {
+          let inThrottle;
+          return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+              func.apply(context, args);
+              inThrottle = true;
+              setTimeout(() => inThrottle = false, limit);
+            }
+          }
+        }
+
+        const debounce = (func, delay) => {
+            let debounceTimer;
+            return function() {
+                const context = this;
+                const args = arguments;
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => func.apply(context, args), delay);
+            }
+        }
+
+        // --- Mobile Menu ---
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        // Check if navLinks exists before querying its children
+        const navLinksItems = navLinks ? navLinks.querySelectorAll('a') : [];
+
+        const toggleMenu = () => {
+            // Add checks for element existence
+            if (!navLinks || !menuBtn || !document.body) return;
+            const isActive = navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            menuBtn.setAttribute('aria-expanded', isActive);
+            menuBtn.innerHTML = isActive ? '✕' : '☰';
+            document.body.classList.toggle('nav-active', isActive);
+        };
+
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', toggleMenu);
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                     // Attempt immediate highlight update after link click
+                     // Wrap in timeout to allow scroll to potentially start
+                    setTimeout(handleActiveLinkHighlight, 50);
+                });
+            });
+             document.addEventListener('click', (event) => {
+                if (navLinks && navLinks.classList.contains('active') && !navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+                    toggleMenu();
+                }
+             });
+        } else {
+             console.error("Mobile menu elements not found.");
+        }
+
+        // --- Header & Back-to-Top Scroll Effects ---
+        const header = document.getElementById('header');
+        const scrollThreshold = 50;
+        const backToTopButton = document.querySelector('.back-to-top');
+        const backToTopThreshold = 300;
+
+        const handleHeaderScroll = () => {
+             if (header) {
+                 if (window.scrollY > scrollThreshold) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+             }
+        }
+
+        const handleBackToTopScroll = () => {
+             if (backToTopButton) {
+                 if (window.scrollY > backToTopThreshold) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+             }
+        }
+
+        // --- Active Navigation Link Highlighting (Scroll-based, Debounced) ---
+        const navLinksHighlightItems = document.querySelectorAll('.nav-links a[href^="#"]');
+        const sections = [];
+
+        navLinksHighlightItems.forEach(link => {
+            try {
+                const sectionId = link.getAttribute('href');
+                // Basic check for valid selector format
+                if (sectionId && sectionId.startsWith('#') && sectionId.length > 1) {
+                    const section = document.querySelector(sectionId);
+                    if (section) {
+                        sections.push(section);
+                    } else {
+                         console.warn(`Highlight: Section element not found for selector: ${sectionId}`);
+                    }
+                } else {
+                     console.warn(`Highlight: Invalid href for nav link: ${sectionId}`);
+                }
+            } catch(e) {
+                console.error(`Highlight: Error processing selector for link ${link.getAttribute('href')}:`, e);
+            }
+        });
+
+        const handleActiveLinkHighlight = () => {
+            if (!header || sections.length === 0) return;
+
+            let currentActiveSectionId = null;
+            const scrollPosition = window.scrollY;
+            // Ensure header.offsetHeight is a valid number before calculations
+            const headerHeight = (header && typeof header.offsetHeight === 'number') ? header.offsetHeight : 80; // Default fallback
+            const referencePoint = scrollPosition + headerHeight + 1;
+
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = sections[i];
+                // Check if section and offsetTop are valid
+                if (section && typeof section.offsetTop === 'number') {
+                    const sectionTop = section.offsetTop;
+                    if (sectionTop <= referencePoint) {
+                        currentActiveSectionId = section.id;
+                        break;
+                    }
+                } else {
+                     console.warn(`Highlight: Invalid section or offsetTop for index ${i}`);
+                }
+            }
+
+            // Edge Cases
+             const firstSection = sections[0];
+             const lastSection = sections[sections.length - 1];
+
+            if (scrollPosition < 100 && firstSection) {
+                currentActiveSectionId = firstSection.id;
+            } else if ((window.innerHeight + scrollPosition) >= document.body.offsetHeight - 10 && lastSection) {
+                 currentActiveSectionId = lastSection.id;
+            }
+
+            // Update Links
+            navLinksHighlightItems.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                 // Ensure currentActiveSectionId is not null before comparing
+                if (currentActiveSectionId && linkHref === `#${currentActiveSectionId}`) {
+                    link.classList.add('active-link');
+                } else {
+                    link.classList.remove('active-link');
+                }
+            });
+        };
+
+        const debouncedHighlightCheck = debounce(handleActiveLinkHighlight, 150);
+
+        // --- Combined Scroll Handler ---
+        const handleScroll = () => {
+             handleHeaderScroll();
+             handleBackToTopScroll();
+             debouncedHighlightCheck(); // Use the debounced version here
+        };
+        window.addEventListener('scroll', throttle(handleScroll, 100));
+
+        // Initial state checks on load
+        handleHeaderScroll();
+        handleBackToTopScroll();
+        handleActiveLinkHighlight(); // Direct call for initial state
+
+
+        // --- Schedule Tabs ---
+        const tabContainer = document.querySelector('.schedule-tabs');
+        const schedulePanels = document.querySelectorAll('.schedule-content');
+        if (tabContainer && schedulePanels.length > 0) {
+            tabContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('tab-btn')) {
+                    const targetDay = event.target.dataset.day;
+                    const targetPanel = document.getElementById(targetDay);
+                    if (targetPanel) { // Check if target panel exists
+                         tabContainer.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                         event.target.classList.add('active');
+                         schedulePanels.forEach(panel => panel.classList.remove('active'));
+                         targetPanel.classList.add('active');
+                    } else {
+                         console.warn(`Schedule: Target panel not found for day: ${targetDay}`);
+                    }
+                }
+            });
+             // Ensure the initial active tab corresponds to an existing panel
+             const initialActiveTab = tabContainer.querySelector('.tab-btn.active');
+             if (initialActiveTab) {
+                 const initialDay = initialActiveTab.dataset.day;
+                 if (!document.getElementById(initialDay)) {
+                     console.warn(`Schedule: Initial active tab '${initialDay}' has no corresponding panel.`);
+                     // Optional: default to first tab/panel if initial one is invalid
+                 }
+             }
+        }
+
+
+        // --- Testimonials Slider (Restored Known-Good Logic) ---
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const dotsContainer = document.getElementById('testimonialDots');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Check if essential elements exist
+        if (slides.length > 0 && nextBtn && prevBtn && dotsContainer) {
+             // Create dots
+             // Clear existing dots first in case of script re-runs
+             dotsContainer.innerHTML = '';
+             slides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.dataset.slideIndex = index;
+                dotsContainer.appendChild(dot);
+             });
+             const dots = dotsContainer.querySelectorAll('.dot'); // Select the created dots
+
+             const showSlide = (n) => {
+                // Ensure slides and dots NodeLists are valid
+                if (!slides || !dots) return;
+
+                // Wrap around logic
+                if (n >= slides.length) { currentSlide = 0; }
+                else if (n < 0) { currentSlide = slides.length - 1; }
+                else { currentSlide = n; }
+
+                // Hide all slides and deactivate dots
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                // Show the current slide and activate dot
+                if (slides[currentSlide]) { // Check index validity
+                     slides[currentSlide].classList.add('active');
+                } else {
+                     console.error(`Testimonial Error: Slide index ${currentSlide} out of bounds.`);
+                }
+                if (dots[currentSlide]) { // Check index validity
+                    dots[currentSlide].classList.add('active');
+                } else {
+                     console.error(`Testimonial Error: Dot index ${currentSlide} out of bounds.`);
+                }
+                 resetInterval(); // Reset interval whenever manually navigated
+             };
+
+            const nextSlide = () => showSlide(currentSlide + 1);
+            const prevSlide = () => showSlide(currentSlide - 1);
+
+            const startInterval = () => {
+                clearInterval(slideInterval); // Clear existing interval if any
+                slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            };
+
+            const resetInterval = () => {
+                 startInterval();
+            };
+
+            // Event Listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    // Ensure dataset.slideIndex exists and is a number
+                    const index = parseInt(e.target.dataset.slideIndex, 10);
+                    if (!isNaN(index)) {
+                         showSlide(index);
+                    } else {
+                         console.error("Testimonial Error: Invalid slide index on dot click.");
+                    }
+                });
+            });
+
+            // Initial setup
+             showSlide(0); // Show the first slide initially
+             startInterval(); // Start auto-play
+
+             // Optional: Pause on hover over the container
+             const testimonialsContainer = document.querySelector('.testimonials-container');
+             if(testimonialsContainer) {
+                testimonialsContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+                testimonialsContainer.addEventListener('mouseleave', startInterval);
+             }
+        } else {
+             console.warn("Testimonial slider elements not found or incomplete. Slider disabled.");
+             if(slides.length === 0) console.warn(" -> No '.testimonial-slide' elements found.");
+             if(!nextBtn) console.warn(" -> Element with ID 'nextBtn' not found.");
+             if(!prevBtn) console.warn(" -> Element with ID 'prevBtn' not found.");
+             if(!dotsContainer) console.warn(" -> Element with ID 'testimonialDots' not found.");
+        }
+
+
+        // --- Form Submission Handling (Basic) ---
+        const contactForm = document.getElementById('contactForm');
+        const contactFormMessage = document.getElementById('contactFormMessage');
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterFormMessage = document.getElementById('newsletterFormMessage');
+
+        const handleFormSubmit = (form, messageElement, event) => {
+            event.preventDefault();
+             if (messageElement) { messageElement.textContent = ''; messageElement.className = 'form-message'; messageElement.style.display = 'none';} // Hide initially
+             // Basic validation example (you might want more)
+             if (form && typeof form.checkValidity === 'function' && !form.checkValidity()) {
+                 console.warn("Form validation failed.");
+                 // Optionally display a generic error or let browser validation handle it
+                 // You could show a message in messageElement here if desired
+                 if(messageElement){
+                     messageElement.textContent = 'Please fill out all required fields.';
+                     messageElement.classList.add('error'); // Use an error style
+                     messageElement.style.display = 'block';
+                 }
+                 return; // Stop submission
+             }
+
+             // Simulate sending data (replace with actual fetch/AJAX later)
+             setTimeout(() => { // Simulate delay
+                if (messageElement) {
+                    messageElement.textContent = 'Thank you! Your message has been sent.';
+                    messageElement.classList.remove('error'); // Ensure no error class
+                    messageElement.classList.add('success');
+                     messageElement.style.display = 'block';
+                }
+                 if (form) form.reset();
+                // Hide message after a few seconds
+                setTimeout(() => {
+                     if (messageElement) messageElement.style.display = 'none';
+                 }, 5000);
+             }, 500);
+        };
+
+        if (contactForm && contactFormMessage) {
+            contactForm.addEventListener('submit', (e) => handleFormSubmit(contactForm, contactFormMessage, e));
+        }
+        if (newsletterForm && newsletterFormMessage) {
+            newsletterForm.addEventListener('submit', (e) => handleFormSubmit(newsletterForm, newsletterFormMessage, e));
+        }
+
+        // --- Copyright Year ---
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        } else {
+            console.warn("Copyright year span element not found.");
+        }
+
+    }); // End DOMContentLoaded
+</script>
+</body>
+</html>
